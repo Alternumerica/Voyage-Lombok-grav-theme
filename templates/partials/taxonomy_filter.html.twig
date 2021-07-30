@@ -1,0 +1,13 @@
+<div class="columns category-filter">
+{% set columns = page.header.class == 'small' ? 'col-3 col-md-4 col-sm-6' : 'col-4 col-md-6 col-sm-12'  %}
+{% for category in page.header.categories %}
+{% set category_class = category.taxonomy.category|first %}
+{% set category_image = category.image ? page.media[category.image] : page.media.images|first %}
+   <div class="column cat_filter {{ columns }} category-filter-{{ category_class }} active" style="background-image: url('{{ category_image.url }}');">
+     <div class="dark-background"><i class="fa fa-eye-slash"></i></div>
+         {% if category.header %}
+            <h6>{{ category.header }}</h6>
+         {% endif %}
+   </div>
+{% endfor %}
+</div>

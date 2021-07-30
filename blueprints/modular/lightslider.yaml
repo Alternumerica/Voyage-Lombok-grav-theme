@@ -1,0 +1,21 @@
+title: Lightslider
+'@extends': default
+
+form:
+  fields:
+    tabs:
+      fields:
+        lightslider:
+          type: tab
+          title: Lightslider
+          fields:
+            header.ratio:
+              type: select
+              label: Ratio
+              default: ratio4_3
+              size: medium
+              options:
+                ratio1_1: Ratio 1:1
+                ratio4_3: Ratio 4:3
+                ratio16_9: Ratio 16:9
+                ratio3_2: Ratio 3:2

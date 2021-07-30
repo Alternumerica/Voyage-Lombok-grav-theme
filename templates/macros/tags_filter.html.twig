@@ -1,0 +1,11 @@
+{% macro collect_by_tag(page, tag) %}
+
+  {% set options = { items: {'@taxonomy.tag': tag}, 'limit': 5, 'order': {'by': 'date', 'dir': 'desc'}, 'pagination': true } %}
+  {% set my_collection = page.collection(options) %}
+  <ul>
+  {% for item in my_collection %}
+    <li><a href="{{ item.url }}">{{item.menu}}</a></li>
+  {% endfor %}
+  </ul>
+
+{% endmacro %}

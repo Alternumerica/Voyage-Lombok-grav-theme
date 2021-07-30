@@ -1,0 +1,259 @@
+/*
+===============================================================================================================================
+Put your custom CSS in this file.
+===============================================================================================================================
+*/
+
+.fa {
+  color: #2dc5c6;
+}
+
+#header .logo img, #header .logo svg {
+    height: 100px;
+}
+#header {
+	height: 7rem;
+	padding: 1rem;
+  border-bottom: 2px solid #2dc5c6;
+  text-align: right;
+  z-index: 1000!important;
+}
+#header .social-pages {
+  padding: 20px;
+  height: auto;
+  transition: all 1s ease;
+}
+
+.social-pages a:focus .fa, .social-pages a:hover .fa {
+  color: #444!important;
+}
+
+body.header-fixed.header-animated #header.scrolled {
+	padding: 0rem;
+}
+a {
+  color: #2dc5c6!important;
+  text-decoration: none;
+}
+a:focus, a:hover, #header a:focus, #header a:hover {
+  color: #444!important;
+}
+
+#header a {
+  color: #2dc5c6;
+  font-size: 14px;
+  font-weight: bold;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+#header.scrolled .social-pages {
+  opacity: 0;
+  height:0;
+  padding: 0;
+}
+
+
+#page-wrapper {
+  padding-top: 7rem;
+}
+
+.is-home #page-wrapper {
+  padding-top:0!important;
+}
+/* Changes for the mobile menu */
+.mobile-menu {
+  z-index: 1000;
+}
+.mobile-menu .button_container span {
+	background: #3085ee !important;
+}
+.overlay {
+	background: #fff;
+  z-index:1000;
+}
+.overlay-menu li {
+  background: none;
+  line-height: 2rem;
+}
+.overlay-menu a {
+  color: #2dc5c6;
+  font-size: 2rem;
+  font-weight: bold;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding-left: 1.5rem;
+}
+.treemenu .toggler {
+	font-size: 2rem;
+	line-height: 2rem;
+	float: left;
+	padding-left: 5px;
+	cursor: pointer;
+}
+
+
+.grav-lightslider {
+  max-width: 976px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Footer section */
+#footer img {
+  height: 100px;
+}
+
+#footer .container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+#footer h1, #footer h2, #footer h3, #footer h4, #footer h5, #footer h6 {
+  margin-top: 0;
+}
+
+#footer .social-pages {
+  margin-bottom: 1rem;
+}
+
+.footer-menu ul {
+  list-style: none;
+}
+
+/* Set the title format on hero at blogs begin*/
+.hero h2 {
+	font-weight: bold;
+	color: #fff;
+	letter-spacing: 5px;
+	text-shadow: 1px 1px 2px black;
+	text-transform: uppercase;
+}
+
+/* Changes for the feature modular part */
+.category-filter {
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+}
+.modular-features .columns, .category-filter {
+  justify-content: center;
+}
+
+.modular-features .column {
+  height: 300px;
+  background-size: cover;
+  position: relative;
+  border: solid #fff 0.05rem;
+}
+
+.category-filter .column {
+  height: 200px;
+  background-size: cover;
+  text-align: center;
+  border: solid #fff 0.1rem;
+  cursor: pointer;
+  padding: 0;
+  position: relative;
+}
+
+.category-filter h6 {
+  color: #fff;
+  margin-top: 3rem;
+  font-weight: bold;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 1.5rem;
+  text-shadow: 1px 1px 2px black;
+}
+.cat_filter > .dark-background {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,0.6);
+}
+.cat_filter.active > .dark-background {
+	display: none;
+}
+.cat_filter i {
+	font-size: 5em;
+}
+
+.modular-features .column a {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  left: 0;
+  background: rgba(0,0,0,0.5);
+  color: #fff;
+  padding: 1rem;
+  height:40%;
+}
+.modular-features .feature-icon {
+  height: initial;
+  margin: 0.2rem;
+}
+.modular-features .feature-icon h6 {
+  color:#fff;
+  background: none;
+  font-size: 0.6rem;
+}
+.feature-content p {
+  margin: 0;
+  font-size: 0.8em;
+  color: #fff;
+}
+.modular-features .column:hover .feature-icon h6 {
+	color: #444;
+}
+/* Customization for lightsliders */
+.lightslider-image-container {
+  overflow: hidden;
+}
+.lightslider-ratio {
+  width:100%;
+  position: relative;
+}
+.lightslider-ratio img {
+  position: absolute;
+  top: 0;
+}
+
+#floating-button {
+  position: fixed;
+  bottom:0;
+  right:1.5rem;
+  text-align: center;
+}
+#floating-button i {
+  background: url('/user/themes/voyage-lombok/images/call-to-action-1.png') no-repeat;
+  width: 195px;
+	height: 90px;
+	display: block;
+	background-size: contain;
+}
+#floating-button i:hover {
+  background: url('/user/themes/voyage-lombok/images/call-to-action-2.png') no-repeat;
+  background-size: contain;
+}
+#floating-button p {
+	position: absolute;
+	top: 45px;
+	color: #fff;
+	font-size: 20px;
+	font-style: normal;
+  left:0;
+  right:0;
+  text-transform: capitalize;
+}
+
+@media all and ( max-width: 1550px ) {
+  #floating-button i {
+    width: 150px;
+  	height: 70px;
+  }
+  #floating-button p {
+    top: 34px;
+    font-size: 16px;
+  }
+}

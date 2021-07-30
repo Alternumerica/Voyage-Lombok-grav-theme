@@ -1,0 +1,16 @@
+{% import 'macros/tags_filter.html.twig' as tags_filter %}
+{% set footer_credentials = theme_var('footer-credentials') %}
+{% set columns_class = 'col-4 col-md-6 col-sm-12' %}
+<section id="footer" class="section bg-gray">
+    <section class="container {{ grid_size }}">
+        <div class="column {{ columns_class }}">
+          {{ footer_credentials }}
+          {% include 'partials/socialmedia.html.twig' %}
+        </div>
+        <div class="column {{ columns_class }}">{% include 'partials/logo.html.twig' %}</div>
+        <div class="column {{ columns_class }} footer-menu">
+          {{ tags_filter.collect_by_tag(page, 'footer') }}
+
+        </div>
+    </section>
+</section>

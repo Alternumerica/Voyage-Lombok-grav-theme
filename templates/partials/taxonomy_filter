@@ -1,0 +1,20 @@
+<div class="columns">
+{% for feature in page.header.features %}
+{% set feature_image = feature.icon ? page.media[feature.icon] : page.media.images|first %}
+   <div class="column {{ columns }}" style="background-image: url({{ feature_image.url }});">
+      {% if feature.url %}<a href="{{feature.url}}">{% endif %}
+      <div class="feature-icon">
+
+         {% if feature.header %}
+            <h6>{{ feature.header }}</h6>
+         {% endif %}
+      </div>
+      <div class="feature-content">
+         {% if feature.text %}
+         <p>{{ feature.text }}</p>
+         {% endif %}
+      </div>
+      {% if feature.url %}</a>{% endif %}
+   </div>
+{% endfor %}
+</div>
